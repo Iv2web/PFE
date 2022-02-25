@@ -1,9 +1,9 @@
 //<Connecting fonts>=================================================================
-// insert the google fonts URL here
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 //<Connecting fonts>=================================================================
 
 //<Defoult font>=================================================================
-$fontfamily: "";
+$fontfamily: "Lato";
 //<Defoult font>=================================================================
 
 //<Variables>=================================================================
@@ -31,11 +31,238 @@ $minwidth: 320px;
 
 //<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
 @import "_ui.scss";
-//@import "../scss/_mixin.scss";
+@import "../scss/_mixin.scss";
 @import "_variables";
 //<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
 
 //< START MAIN BLOCK >=================================================================
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+  top: 35px;
+  left: 0;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+  }
+
+  &__menu {
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-55px, 0);
+  }
+  @media (max-width: 767px) {
+    top: 15px;
+  }
+}
+.menu {
+  &__icon {
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    li {
+      position: relative;
+      padding: 0px 40px;
+      &:nth-child(2) {
+        padding: 0px 80px 0px 40px;
+      }
+      &:nth-child(3) {
+        padding: 0px 40px 0px 80px;
+      }
+      &::after {
+        content: "";
+        width: 3px;
+        height: 3px;
+        background-color: $dark;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin: -2px 0px 0px 0px;
+      }
+      &:nth-child(2),
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: $dark;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 767px) {
+    &__body {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: -100%;
+      left: 0px;
+      background-color: $telegrey;
+      padding: 150px 0px 20px 0px;
+      transition: all 0.3s ease 0s;
+      &.active {
+        transition: all 0.3s ease 0s;
+        top: 0;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding: 0px 0px 45px 0px;
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding: 0px 0px 45px 0px;
+          &::after {
+            display: block;
+          }
+        }
+        &:last-child {
+          padding: 0;
+        }
+        &::after {
+          width: 3px;
+          height: 3px;
+          background-color: $smoky;
+          right: 50%;
+          top: 40px;
+        }
+      }
+    }
+    &__link {
+      color: $smoky;
+      font-size: 20px;
+    }
+  }
+}
+
+.icon-menu {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    margin: 47px 0px 0px 0px;
+    z-index: 5;
+    span {
+      top: 8px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $dark;
+      transition: all 0.3s ease 0s;
+      &:first-child {
+        top: 0px;
+      }
+      &:last-child {
+        top: 16px;
+      }
+    }
+    &.active {
+      span {
+        background-color: $smoky;
+        transform: scale(0);
+        transition: all 0.3s ease 0s;
+        &:first-child {
+          transform: rotate(-45deg);
+          top: 8px;
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+
+.link-menu-1 {
+  letter-spacing: 3.6px;
+}
+.link-menu-2 {
+  letter-spacing: 7.9px;
+}
+.link-menu-3 {
+  letter-spacing: 3px;
+}
+
+.main-screen {
+  flex: 1 0 100%;
+  position: relative;
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.content {
+}
+
+.footer {
+  &__row {
+    display: flex;
+    flex: 1 1 33.333%;
+  }
+
+  &__rights {
+  }
+
+  &__social {
+  }
+
+  &__list {
+  }
+
+  &__adress {
+  }
+}
+.social {
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+  }
+}
 
 //< END MAIN BLOCK >=================================================================
 //< START HEADER >=================================================================

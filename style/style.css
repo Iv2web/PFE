@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 /*Обнуление*/
 * {
   padding: 0;
@@ -40,7 +41,7 @@ body {
 body {
   line-height: 1;
   font-size: 14px;
-  font-family: "";
+  font-family: "Lato";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -49,7 +50,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "Lato";
 }
 
 input::-ms-clear {
@@ -99,7 +100,7 @@ h6 {
 }
 
 .container {
-  max-width: 1130px;
+  max-width: 1160px;
   padding: 0px 15px;
   margin: 0px auto;
 }
@@ -109,6 +110,10 @@ h6 {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.ibg img {
+  display: none;
 }
 
 /* .ibg img {
@@ -128,33 +133,291 @@ h6 {
   visibility: hidden;
 }
 
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+  top: 35px;
+  left: 0;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 110px;
+}
+
+.header__logo {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-55px, 0);
+          transform: translate(-55px, 0);
+}
+
+@media (max-width: 767px) {
+  .header {
+    top: 15px;
+  }
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list li {
+  position: relative;
+  padding: 0px 40px;
+}
+
+.menu__list li:nth-child(2) {
+  padding: 0px 80px 0px 40px;
+}
+
+.menu__list li:nth-child(3) {
+  padding: 0px 40px 0px 80px;
+}
+
+.menu__list li::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #4d4d4d;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin: -2px 0px 0px 0px;
+}
+
+.menu__list li:nth-child(2)::after, .menu__list li:last-child::after {
+  display: none;
+}
+
+.menu__link {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4d4d4d;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0px;
+    background-color: #7e8185;
+    padding: 150px 0px 20px 0px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .menu__body.active {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: 0;
+  }
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu__list li {
+    padding: 0px 0px 45px 0px;
+  }
+  .menu__list li:nth-child(2), .menu__list li:nth-child(3) {
+    padding: 0px 0px 45px 0px;
+  }
+  .menu__list li:nth-child(2)::after, .menu__list li:nth-child(3)::after {
+    display: block;
+  }
+  .menu__list li:last-child {
+    padding: 0;
+  }
+  .menu__list li::after {
+    width: 3px;
+    height: 3px;
+    background-color: #dcdcdc;
+    right: 50%;
+    top: 40px;
+  }
+  .menu__link {
+    color: #dcdcdc;
+    font-size: 20px;
+  }
+}
+
+.icon-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .icon-menu {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    margin: 47px 0px 0px 0px;
+    z-index: 5;
+  }
+  .icon-menu span {
+    top: 8px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #4d4d4d;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+  .icon-menu span:last-child {
+    top: 16px;
+  }
+  .icon-menu.active span {
+    background-color: #dcdcdc;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .icon-menu.active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 8px;
+  }
+  .icon-menu.active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 8px;
+  }
+}
+
+.link-menu-1 {
+  letter-spacing: 3.6px;
+}
+
+.link-menu-2 {
+  letter-spacing: 7.9px;
+}
+
+.link-menu-3 {
+  letter-spacing: 3px;
+}
+
+.main-screen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative;
+}
+
+.main-screen__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* 
-   .header-menu__icon{
-      display: block;
+.icon-menu {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    margin: 25px 0px 0px 0px;
+    z-index: 5;
+    span {
+      top: 8px;
+      left: 0;
       position: absolute;
-      top: 18px;
-      right: 10px;
-      width: 30px;
-      height: 18px;
-      cursor: pointer;
-      z-index: 5;
-      span{
-         @include anim(0.3s,0s);
-         top: 8px;
-         left: 0;
-         position: absolute;
-         width: 100%;
-         height: 2px;
-         background-color: #000;
-            &:first-child{top: 0px;}
-            &:last-child{top: auto;bottom: 0px;}
-         }
-      &.active{
-         span{@include scale(0);
-            &::first-child{@include rotate(-45deg);top: 8px;}
-            &::last-child{@include rotate(45deg);bottom: 8px;}
-         }
+      width: 100%;
+      height: 2px;
+      background-color: $dark;
+      transition: all 0.3s ease 0s;
+      &:first-child {
+        top: 0px;
       }
-   } 
-   */
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    &.active {
+      span {
+        background-color: #fff;
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: 8px;
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: 8px;
+        }
+      }
+    }
+  }
+}  
+*/
 /*# sourceMappingURL=style.css.map */
