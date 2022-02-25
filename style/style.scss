@@ -1,0 +1,96 @@
+//<Connecting fonts>=================================================================
+// insert the google fonts URL here
+//<Connecting fonts>=================================================================
+
+//<Defoult font>=================================================================
+$fontfamily: "";
+//<Defoult font>=================================================================
+
+//<Variables>=================================================================
+$minwidth: 320px;
+//<Variables>=================================================================
+
+//<Connecting reset styles>=================================================================
+@import "_reset-style";
+//<Connecting reset styles>=================================================================
+
+//<Wrapper>=================================================================
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+//<Wrapper>=================================================================
+
+//<MAIN GRID>=================================================================
+.container {
+  max-width: 1160px;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+//<MAIN GRID>=================================================================
+
+//<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
+@import "_ui.scss";
+//@import "../scss/_mixin.scss";
+@import "_variables";
+//<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
+
+//< START MAIN BLOCK >=================================================================
+
+//< END MAIN BLOCK >=================================================================
+//< START HEADER >=================================================================
+
+//< END HEADER >=================================================================
+//< START CONTENT >=================================================================
+
+//< END  CONTENT >=================================================================
+//< END MAIN BLOCK >=================================================================
+
+// burger of one spans
+
+/* 
+.icon-menu {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    margin: 25px 0px 0px 0px;
+    z-index: 5;
+    span {
+      top: 8px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $dark;
+      transition: all 0.3s ease 0s;
+      &:first-child {
+        top: 0px;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    &.active {
+      span {
+        background-color: #fff;
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: 8px;
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: 8px;
+        }
+      }
+    }
+  }
+}  
+*/
