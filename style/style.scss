@@ -44,6 +44,9 @@ $minwidth: 320px;
   left: 0px;
   display: flex;
   flex-direction: column;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .header {
@@ -133,6 +136,7 @@ $minwidth: 320px;
       &.active {
         transition: all 0.3s ease 0s;
         top: 0;
+        overflow: auto;
       }
     }
     &__list {

@@ -3,7 +3,7 @@
 $(document).ready(function(){
    $('.icon-menu').click(function(event){
        $('.icon-menu,.menu__body').toggleClass('active')
-       $('page').toggleClass('lock')
+       $('.page').toggleClass('lock')
    });
 });
 

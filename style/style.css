@@ -148,6 +148,10 @@ h6 {
           flex-direction: column;
 }
 
+.page.lock {
+  overflow: hidden;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -243,6 +247,7 @@ h6 {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     top: 0;
+    overflow: auto;
   }
   .menu__list {
     -webkit-box-orient: vertical;
