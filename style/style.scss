@@ -248,11 +248,11 @@ $minwidth: 320px;
   padding: 115px 0px 102px 0px;
   &__block {
   }
-  @media (max-width: 1400px) {
-    padding: 50px 0px 50px 0px;
+  @media (max-width: 1000px) {
+    padding: 50px 0px;
   }
-  @media (max-width: 1200px) {
-    padding: 40px 0px 40px 0px;
+  @media (max-width: 500px) {
+    padding: 40px 0px;
   }
 }
 .block {
@@ -360,6 +360,19 @@ $minwidth: 320px;
       padding: 48px 45px 35px 45px;
     }
   }
+  @media (max-width: 1000px) {
+    &__row {
+      flex-direction: column;
+    }
+    &__rev {
+      .pupets__column {
+        order: 2;
+        &_b {
+          order: 1;
+        }
+      }
+    }
+  }
 }
 .item {
   position: relative;
@@ -374,6 +387,9 @@ $minwidth: 320px;
     height: 100%;
     top: 0px;
     left: 0px;
+  }
+  @media (max-width: 1000px) {
+    padding: 0px 0px 42% 0px;
   }
 }
 .block {
