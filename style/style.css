@@ -370,6 +370,18 @@ h6 {
   padding: 115px 0px 102px 0px;
 }
 
+@media (max-width: 1400px) {
+  .introduction {
+    padding: 50px 0px 50px 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .introduction {
+    padding: 40px 0px 40px 0px;
+  }
+}
+
 .block {
   text-align: center;
 }
@@ -409,6 +421,36 @@ h6 {
   background-color: #7e8185;
 }
 
+@media (max-width: 1400px) {
+  .block__icon {
+    margin: 0px 0px 30px 0px;
+  }
+  .block__title {
+    margin: 0px 0px 15px 0px;
+  }
+  .block__text {
+    line-height: 30px;
+  }
+  .block__text_j::after {
+    margin: 15px auto 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .block__icon {
+    margin: 0px 0px 20px 0px;
+  }
+  .block__title {
+    margin: 0px 0px 10px 0px;
+  }
+  .block__text {
+    line-height: 25px;
+  }
+  .block__text_j::after {
+    margin: 10px auto 0 auto;
+  }
+}
+
 .pupets__rev .pupets__column {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -445,6 +487,12 @@ h6 {
 
 .pupets__image {
   padding: 0px 0px 33.335% 0px;
+}
+
+@media (max-width: 1400px) {
+  .pupets__content {
+    padding: 48px 45px 35px 45px;
+  }
 }
 
 .item {

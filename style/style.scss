@@ -248,6 +248,12 @@ $minwidth: 320px;
   padding: 115px 0px 102px 0px;
   &__block {
   }
+  @media (max-width: 1400px) {
+    padding: 50px 0px 50px 0px;
+  }
+  @media (max-width: 1200px) {
+    padding: 40px 0px 40px 0px;
+  }
 }
 .block {
   text-align: center;
@@ -280,6 +286,38 @@ $minwidth: 320px;
         width: 50px;
         height: 1px;
         background-color: $telegrey;
+      }
+    }
+  }
+  @media (max-width: 1400px) {
+    &__icon {
+      margin: 0px 0px 30px 0px;
+    }
+    &__title {
+      margin: 0px 0px 15px 0px;
+    }
+    &__text {
+      line-height: 30px;
+      &_j {
+        &::after {
+          margin: 15px auto 0 auto;
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    &__icon {
+      margin: 0px 0px 20px 0px;
+    }
+    &__title {
+      margin: 0px 0px 10px 0px;
+    }
+    &__text {
+      line-height: 25px;
+      &_j {
+        &::after {
+          margin: 10px auto 0 auto;
+        }
       }
     }
   }
@@ -316,6 +354,11 @@ $minwidth: 320px;
 
   &__image {
     padding: 0px 0px 33.335% 0px;
+  }
+  @media (max-width: 1400px) {
+    &__content {
+      padding: 48px 45px 35px 45px;
+    }
   }
 }
 .item {
