@@ -459,8 +459,51 @@ $minwidth: 320px;
     line-height: 35px;
     letter-spacing: 1px;
     color: $telegrey;
+    text-align: center;
   }
 }
+//< SLIDER >==============================================================
+/* Слайдер */
+.slick-slider {
+  position: relative;
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+/* Стрелка */
+.slick-arrow {
+  font-size: 0;
+}
+/* Точки (булиты) */
+.slick-dots {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin: 0px 0px 0px -28px;
+  display: flex;
+}
+.slick-dots li {
+  list-style: none;
+  margin: 0px 5px;
+}
+/* Активная точка */
+.slick-dots li.slick-active button {
+  background-color: $antracit;
+}
+/* Элемент точки */
+.slick-dots li button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid $antracit;
+}
+//< SLIDER >==============================================================
 
 //< END  CONTENT >=================================================================
 //< END MAIN BLOCK >=================================================================
