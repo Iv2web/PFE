@@ -538,9 +538,22 @@ $minwidth: 320px;
   }
 
   &__footer {
+    padding: 75px 0px;
+    text-align: center;
+    background-color: $dark;
   }
 
   &__btn {
+    display: inline-block;
+    line-height: 48px;
+    height: 50px;
+    letter-spacing: 1px;
+    color: $white;
+    padding: 0px 64px;
+    font-size: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid $smoky;
   }
   @media (max-width: 1000px) {
     &__body {
@@ -554,6 +567,22 @@ $minwidth: 320px;
       &:last-child {
         flex: 1 1 100%;
       }
+    }
+    &__footer {
+      padding: 55px 0px;
+    }
+    &__btn {
+      padding: 0px 34px;
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 500px) {
+    &__footer {
+      padding: 35px 0px;
+    }
+    &__btn {
+      padding: 0px 20px;
+      font-size: 16px;
     }
   }
 }
