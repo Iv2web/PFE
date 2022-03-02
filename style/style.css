@@ -793,6 +793,95 @@ h6 {
   padding: 0px 0px 100% 0px;
 }
 
+.message {
+  background: -webkit-gradient(linear, right top, left top, color-stop(-1.59%, #dcdcdc), color-stop(50%, #ffffff), to(#dcdcdc));
+  background: linear-gradient(270deg, #dcdcdc -1.59%, #ffffff 50%, #dcdcdc 100%);
+}
+
+.message__body {
+  padding: 99px 0px 128px 0px;
+  max-width: 558px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.message__logo {
+  margin: 0px 0px 23px 0px;
+}
+
+.message__lable {
+  margin: 0px 0px 23px 0px;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 30px;
+  color: #7e8185;
+}
+
+.message__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.message__input {
+  margin: 0px 7px 7px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.message__input .input {
+  width: 100%;
+  height: 74px;
+  border: 2px solid #7e8185;
+  padding: 0px 21px;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 30px;
+  background-color: transparent;
+  color: #7e8185;
+}
+
+.message__input .input.focus {
+  font-style: normal;
+  color: #4d4d4d;
+}
+
+.message__input .input.err {
+  border: 2px solid red;
+}
+
+.message__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 132px;
+          flex: 0 0 132px;
+}
+
+.message__btn {
+  width: 132px;
+  height: 74px;
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 34px;
+  background-color: #4169e1;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .message__body {
+    padding: 50px 0px 70px 0px;
+  }
+  .message__form {
+    display: block;
+  }
+  .message__input {
+    margin: 0px 0px 7px 0px;
+  }
+  .message__btn {
+    width: 100%;
+  }
+}
+
 .footer__row {
   display: -webkit-box;
   display: -ms-flexbox;

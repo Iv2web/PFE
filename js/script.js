@@ -19,7 +19,6 @@ function ibg(){
    }
    
    ibg();
-/* ======================================================================================== */
 
 /*===< slider >=================================================== */
 /* $(document).ready(function(){ */
@@ -38,6 +37,27 @@ function ibg(){
          settings: {}
       }]
 });
+
+/*===< for FORMS >=================================================== */
+/* function forms(){
+   //FIELDS
+   $('input,textarea').focus(function(){
+      if($(this).val() == $(this).attr('data-value')){
+            $(this).addClass('focus');
+            $(this).parent().addClass('focus');
+         if($(this).attr('data-type')=='pass'){
+            $(this).attr('type','password');
+         };
+         $(this).val('');   
+      };
+      removeError($(this));
+   });
+   $('input[data-value], textarea[data-value]').each(function() {
+      if (this.value == '' || this.value == $(this).attr('data-value')) {
+         
+      }
+   });
+} */
 
 /*===< for IBG technology pure JS >=================================================== */
 

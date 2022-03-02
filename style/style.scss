@@ -609,6 +609,97 @@ $minwidth: 320px;
     }
   }
 }
+//=========================================================================
+.message {
+  background: linear-gradient(
+    270deg,
+    #dcdcdc -1.59%,
+    #ffffff 50%,
+    #dcdcdc 100%
+  );
+
+  &__body {
+    padding: 99px 0px 128px 0px;
+    max-width: 558px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__logo {
+    margin: 0px 0px 23px 0px;
+  }
+
+  &__lable {
+    margin: 0px 0px 23px 0px;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 30px;
+    color: $telegrey;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    margin: 0px 7px 7px 0px;
+    flex: 1 1 auto;
+    .input {
+      width: 100%;
+      height: 74px;
+      border: 2px solid $telegrey;
+      padding: 0px 21px;
+      font-style: italic;
+      font-size: 25px;
+      line-height: 30px;
+      background-color: transparent;
+      color: $telegrey;
+      &.focus {
+        font-style: normal;
+        color: $dark;
+      }
+      &.err {
+        border: 2px solid red;
+      }
+    }
+  }
+
+  &__button {
+    flex: 0 0 132px;
+  }
+
+  &__btn {
+    width: 132px;
+    height: 74px;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 34px;
+    background-color: $blue;
+    color: $white;
+  }
+  @media (max-width: 767px) {
+    &__body {
+      padding: 50px 0px 70px 0px;
+    }
+    &__form {
+      display: block;
+    }
+    &__input {
+      margin: 0px 0px 7px 0px;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+.input {
+}
+.form {
+  &__btn {
+  }
+}
+.btn {
+}
 
 //< END  CONTENT >=================================================================
 //< END MAIN BLOCK >=================================================================
