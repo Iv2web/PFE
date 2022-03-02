@@ -520,6 +520,12 @@ h6 {
   }
 }
 
+.item {
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
 .item__logo {
   position: absolute;
   width: 100%;
@@ -529,18 +535,18 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
   background: rgba(65, 105, 225, 0.5);
+  z-index: 2;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 .item__image {
@@ -565,19 +571,30 @@ h6 {
 .testimonials {
   background: -webkit-gradient(linear, left top, right top, from(#dcdcdc), color-stop(#fff), to(#dcdcdc));
   background: linear-gradient(to right, #dcdcdc, #fff, #dcdcdc);
-}
-
-.card {
   padding: 102px 0px 130px 0px;
 }
 
-.card__icon {
+@media (max-width: 1000px) {
+  .testimonials {
+    padding: 40px 0px 50px 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .testimonials {
+    padding: 30px 0px 50px 0px;
+  }
+}
+
+.card {
   text-align: center;
+}
+
+.card__icon {
   margin: 0px 0px 35px 0px;
 }
 
 .card__title {
-  text-align: center;
   font-size: 23px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -595,70 +612,121 @@ h6 {
   line-height: 35px;
   letter-spacing: 1px;
   color: #7e8185;
-  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .card__icon {
+    margin: 0px 0px 20px 0px;
+  }
+  .card__title {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card__title {
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 /* Слайдер */
 .slick-slider {
   position: relative;
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+  /* Точки (булиты) */
 }
 
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
-.slick-list {
+.slick-slider .slick-list {
   overflow: hidden;
 }
 
-/* Лента слайдов */
-.slick-track {
+.slick-slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
-/* Стрелка */
-.slick-arrow {
-  font-size: 0;
-}
-
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки (булиты) */
-.slick-dots {
-  position: absolute;
-  bottom: 51px;
-  left: 50%;
-  margin: 0px 0px 0px -28px;
+.slick-slider .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 67px 0px 0px 0px;
 }
 
-.slick-dots li {
-  list-style: none;
+.slick-slider .slick-dots li {
   margin: 0px 5px;
 }
 
-/* Активная точка */
-.slick-dots li.slick-active button {
-  background-color: #444444;
-}
-
-/* Элемент точки */
-.slick-dots li button {
+.slick-slider .slick-dots li button {
   font-size: 0;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: transparent;
   border: 2px solid #444444;
+}
+
+.slick-slider .slick-dots li.slick-active button {
+  background-color: #444444;
+}
+
+.show__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.show__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 16.667%;
+          flex: 0 1 16.667%;
+}
+
+.show__column_b {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.block-show {
+  display: block;
+  height: 100%;
+}
+
+.block-show__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block-show__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.block-show__item {
+  display: block;
+  height: auto;
+  padding: 0px 0px 50% 0px;
+}
+
+.block-show__item_b {
+  padding: 0px 0px 200% 0px;
+}
+
+.block-show__item_l {
+  padding: 0px 0px 100% 0px;
 }
 
 .footer__row {
