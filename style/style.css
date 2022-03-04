@@ -244,6 +244,17 @@ h6 {
   line-height: 18px;
   color: #4d4d4d;
   text-transform: uppercase;
+  position: relative;
+}
+
+.menu__link:hover::after {
+  content: "";
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 2px;
+  position: absolute;
+  top: 20px;
+  left: 0px;
 }
 
 @media (max-width: 767px) {
@@ -721,6 +732,15 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   border: 1px solid #dcdcdc;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.show__btn:hover {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 0 0 6px #dcdcdc;
+          box-shadow: 0 0 6px #dcdcdc;
 }
 
 @media (max-width: 1000px) {
@@ -950,7 +970,15 @@ h6 {
 }
 
 .social__link {
-  margin: 0px 10px;
+  margin: 5px 10px 0px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.social__link:hover {
+  margin: 0px 10px 5px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 @media (max-width: 500px) {

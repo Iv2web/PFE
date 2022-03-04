@@ -29,13 +29,13 @@ $minwidth: 320px;
 }
 //<MAIN GRID>=================================================================
 
-//<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
+//<CONNECTING FILES STYLES PAGES AND ELEMENTS>================================
 @import "_ui.scss";
 @import "../scss/_mixin.scss";
 @import "_variables";
-//<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
+//<CONNECTING FILES STYLES PAGES AND ELEMENTS>================================
 
-//< START MAIN BLOCK >=================================================================
+//< START MAIN BLOCK >============================================================
 .page {
   position: absolute;
   width: 100%;
@@ -60,8 +60,8 @@ $minwidth: 320px;
     left: 0px;
   }
 }
-
 //< END MAIN BLOCK >=================================================================
+
 //< START HEADER >=================================================================
 .header {
   position: absolute;
@@ -135,6 +135,18 @@ $minwidth: 320px;
     line-height: 18px;
     color: $dark;
     text-transform: uppercase;
+    position: relative;
+    &:hover {
+      &::after {
+        content: "";
+        background-color: $dark;
+        width: 80px;
+        height: 2px;
+        position: absolute;
+        top: 20px;
+        left: 0px;
+      }
+    }
   }
 
   @media (max-width: 767px) {
@@ -240,6 +252,7 @@ $minwidth: 320px;
   letter-spacing: 3px;
 }
 //< END HEADER >=================================================================
+
 //< START CONTENT >=================================================================
 .content {
 }
@@ -322,7 +335,6 @@ $minwidth: 320px;
     }
   }
 }
-
 //========================================================================
 .pupets {
   &__rev {
@@ -426,7 +438,6 @@ $minwidth: 320px;
   &__text {
   }
 }
-
 //=================================================================================
 .testimonials {
   background: linear-gradient(to right, $smoky, $white, $smoky);
@@ -554,6 +565,11 @@ $minwidth: 320px;
     font-weight: 700;
     text-transform: uppercase;
     border: 1px solid $smoky;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      transition: all 0.3s ease 0s;
+      box-shadow: 0 0 6px $smoky;
+    }
   }
   @media (max-width: 1000px) {
     &__body {
@@ -694,12 +710,9 @@ $minwidth: 320px;
 }
 .btn {
 }
-
 //< END  CONTENT >=================================================================
-//< END MAIN BLOCK >=================================================================
 
 //< START FOOTER >=================================================================
-
 .footer {
   background: linear-gradient(
     270deg,
@@ -756,7 +769,12 @@ $minwidth: 320px;
   justify-content: center;
   align-items: center;
   &__link {
-    margin: 0px 10px;
+    margin: 5px 10px 0px;
+    transition: all 0.4s ease 0s;
+    &:hover {
+      margin: 0px 10px 5px;
+      transition: all 0.4s ease 0s;
+    }
   }
   @media (max-width: 500px) {
     &__link {
